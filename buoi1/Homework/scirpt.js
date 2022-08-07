@@ -113,6 +113,16 @@ let all = "Nhiệt độ" + ":" + celsiusToFahrenheit(2) + " " + "độ F";
 console.log(all);
 
 
+function name(a,b) {
+     
+   const result1 = a + b;
+   const result2 = a - b;
+   return result1 + "," + result2;
+    
+}
+
+console.log(name(4,5));
+
 
 
 
