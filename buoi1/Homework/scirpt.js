@@ -72,7 +72,7 @@ function findAreaOfCircle(r) {
      let result = (r * 3.14)**2;
      return result;
 }
-console.log(findAreaOfCircle(2));
+console.log("Diện tích hình tròn" + ":" + findAreaOfCircle(2));
 
 // * Tính diện tích hình tam giác theo công thức Heron
 //  *
@@ -93,7 +93,7 @@ function findAreaOfTriangle(a, b, c) {
     return result ;
 
 }
-console.log(findAreaOfTriangle(7, 10, 13));
+console.log("Diện tích hình tam giác" +":"+ findAreaOfTriangle(7, 10, 13));
 
 //  Chuyển đổi nhiệt ở ở thang nhiệt Celsius sang Fahrenheit
 //  *
@@ -109,8 +109,13 @@ console.log(findAreaOfTriangle(7, 10, 13));
     let Fahrenheit = (temp * 1.8) + 32;
     return Fahrenheit;
  }
-let all = celsiusToFahrenheit(2) + " " + "độ F";
+let all = "Nhiệt độ" + ":" + celsiusToFahrenheit(2) + " " + "độ F";
 console.log(all);
+
+
+
+
+
 
 
 
