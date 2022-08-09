@@ -164,14 +164,14 @@ console.log(calcGrade(9.5));
  *
  * @return {number} Số tiền phải trả
  */
-let intact = 10.0;
-let firstKm = 11.0;
-let secondKm = 9.5;
+let intact = 10_000;
+let firstKm = 11_000;
+let secondKm = 9_500;
 function calcTaxiFee(km) {
   if (0 < km && 30 >= km) {
-    return intact + firstKm * km + " " + "NGHÌN ĐỒNG";
+    return intact + firstKm * km + " " + " VNĐ ";
   } else {
-    return intact + secondKm * km + " " + "NGHÌN ĐỒNG";
+    return intact + secondKm * km + " " + " VNĐ";
   }
 }
 console.log(calcTaxiFee(40));
