@@ -43,6 +43,8 @@ function findSeason(month) {
     wrather = "Summer";
   } else if (month == 9 || month == 10 || month == 11) {
     wrather = "Fall";
+  } else {
+    return NaN;
   }
   return "Tháng" + " " + month + " " + wrather;
 }
@@ -183,16 +185,19 @@ console.log(calcTaxiFee(10));
  * @return {number | [number, number] | null} Nghiệm phương trình
  */
 function solveEquation(a, b, c) {
-  let test = (-b / 2) * a;
+  let test = -b / (2 * a);
   let test1 = b ** 2 - 4 * a * c;
 
-  if ((a = b = c = 0)) {
-    return Infinity;
-  } else if ( a=!0 && test1 < 0) {
+  if (a==0 && b == 0 && c == 0) {
+    return Infinity ;
+    
+  }
+
+  else if (test1 < 0) {
     return null;
-  } else if (test1 = 0) {
+  } else if (test1 == 0) {
     return test;
-  } else {
+  } else if (test1 > 0) {
     return (
       "nghiệm 1 là " +
       " " +
@@ -202,6 +207,14 @@ function solveEquation(a, b, c) {
       " " +
       (test - (test1 ** 0.5 * 1) / 2)
     );
-  }
+  } 
+  
 }
+
+console.log(solveEquation(0,0, 0));
 console.log(solveEquation(1, 1, 1));
+console.log(solveEquation(1, 2, 1));
+console.log(solveEquation(3, 4, 1));
+
+
+
