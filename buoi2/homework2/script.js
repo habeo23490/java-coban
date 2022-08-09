@@ -48,6 +48,9 @@ function findSeason(month) {
   }
   return "Tháng" + " " + month + " " + wrather;
 }
+
+
+
 console.log(findSeason(12));
 console.log(findSeason(5));
 console.log(findSeason(7));
@@ -98,14 +101,14 @@ function findDayOfMonth(month, year) {
     month == 10 ||
     month == 12
   ) {
-    return "Tháng" + month + " " + " có 31 ngày ";
+    return "Năm" + " "+ year + " " + "Tháng" + month + " " + " có 31 ngày ";
   } else if (month == 4 || month == 6 || month == 9 || month == 11) {
-    return "Tháng" + month + " " + " có 30 ngày ";
+    return "Năm" + " " + year + " " + "Tháng" + month + " " + " có 30 ngày ";
   } else if (month == 2) {
     if (isLeafYear(year) == true) {
-      return "Tháng 2 có 29 ngày ";
+      return "Năm" + " " + year + " " + "Tháng 2 có 29 ngày ";
     } else {
-      return "Tháng 2 có 28 ngày ";
+      return "Năm" + " " + year + " " + "Tháng 2 có 28 ngày ";
     }
   }
 }
@@ -130,20 +133,24 @@ console.log(findDayOfMonth(1, 2113));
 function calcGrade(point) {
   if (point < 4) {
     return "Điểm F";
-  } else if (point >= 4 && point < 5.5) {
+  } else if (point > 4 && point < 5.5) {
     return "Điểm D";
-  } else if (point >= 5.5 && point < 7) {
+  } else if (point > 5.5 && point < 7) {
     return "Điểm C";
-  } else if (point >= 7 && point < 8.5) {
+  } else if (point > 7 && point < 8.5) {
     return "Điểm B";
-  } else if (point >= 8.5 && point <= 10) {
+  } else if (point > 8.5 && point < 10) {
     return "Điểm A";
   } else {
     return NaN;
   }
 }
 console.log(calcGrade(11));
-console.log(calcGrade(5.5));
+console.log(calcGrade(3.5));
+console.log(calcGrade(6.5));
+console.log(calcGrade(7.5));
+console.log(calcGrade(9.5));
+
 
 /**
  * Tính tiền cước taxi cho khách theo số kilomet đã di chuyển
