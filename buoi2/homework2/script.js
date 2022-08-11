@@ -18,7 +18,7 @@ function maxOfThree(a, b, c) {
     return "a b c bang nhau";
   }
 }
-console.log(maxOfThree(2, 1, 1));
+console.log(maxOfThree(2, 2, 1));
 console.log(maxOfThree(1, 1, 1));
 
 /**
@@ -55,6 +55,8 @@ console.log(findSeason(12));
 console.log(findSeason(5));
 console.log(findSeason(7));
 console.log(findSeason(11));
+console.log(findSeason(21));
+
 
 /**
  * Kiểm tra xem một năm có phải năm nhuận hay không
@@ -137,9 +139,9 @@ function calcGrade(point) {
     return "Điểm D";
   } else if (point > 5.5 && point < 7) {
     return "Điểm C";
-  } else if (point > 7 && point < 8.5) {
+  } else if (point > 7 && point <= 8.5) {
     return "Điểm B";
-  } else if (point > 8.5 && point < 10) {
+  } else if (point > 8.5 && point <= 10) {
     return "Điểm A";
   } else {
     return NaN;
@@ -173,6 +175,7 @@ function calcTaxiFee(km) {
   } else {
     return intact + secondKm * km + " " + " VNĐ";
   }
+  // số km ko có sô âm nên eles
 }
 console.log(calcTaxiFee(40));
 console.log(calcTaxiFee(10));
@@ -215,6 +218,7 @@ function solveEquation(a, b, c) {
       (test - (test1 ** 0.5 * 1) / 2)
     );
   } 
+  // thieu khi a = 0 ;
   
 }
 
