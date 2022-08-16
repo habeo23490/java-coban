@@ -19,12 +19,13 @@ const guessList = {
  * @return {string} Câu chào
  */
 function greeting(name) {
-    if(name == guessList) {
-        return " Hi! I'm " + [name] + " and I'm from " [country] 
-    }
-    else {
-        return "Hi! I'm guess"
-    }
+   if(name in guessList) {
+    return "hi , i m " + name + " " + guessList.name  ;
+   }
+   else {
+    return "Hi! I'm guess" 
+   }
+   
 }
 console.log(greeting(Sam));
 
@@ -47,7 +48,9 @@ const myFamily = {
  *
  * @return {{[key: string]: number}} Danh sách thành viên và số tuổi tương ứng sau `n` năm
  */
-function afterNYears(obj, n) {}
+function afterNYears(obj, n) {
+
+}
 
 /**
  * Đảo ngược key thành value, value thành key của một object bất kỳ
