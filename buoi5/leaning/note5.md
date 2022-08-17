@@ -1,0 +1,1 @@
+array (mảng) khác objec là arr có key tự xác đinh thứ tự hay còn tên khác là chỉ mục 
