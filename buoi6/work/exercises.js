@@ -154,4 +154,12 @@ function secondLargest(arr) {}
  *
  * @return {arr} Mảng bị xáo trộn
  */
-function shuffle(arr) {}
+function shuffle(arr1) {
+    const temp = [];
+    for(let numberss of arr1) {
+      arr1.sort(() => Math.random() - 0.5)
+
+    }
+    return arr1;
+}
+console.log(shuffle([1,4,2,4,3]));
