@@ -19,15 +19,22 @@ const guessList = {
  * @return {string} Câu chào
  */
 function greeting(name) {
-   if(name in guessList) {
-    return "hi , i m " + name + " " + guessList.name  ;
+    for(let key in guessList ) {
+        
+    
+   if(key === name) {
+    return "hi , i m " + key + " " + guessList[name]  ;
    }
-   else {
-    return "Hi! I'm guess" 
-   }
-   
+  
 }
-console.log(greeting(Sam));
+return "Hi! I'm guess" 
+}
+
+console.log(greeting("Wendy"));
+console.log(greeting("Norman"));
+console.log(greeting("Sam"));
+console.log(greeting("Randy"));
+console.log(greeting("Ha"));
 
 // Danh sách thành viên trong 1 gia đình
 // Tên là key, tuổi là value
@@ -49,8 +56,16 @@ const myFamily = {
  * @return {{[key: string]: number}} Danh sách thành viên và số tuổi tương ứng sau `n` năm
  */
 function afterNYears(obj, n) {
-
+    const obj1 = {};
+    for(let age in obj) {
+        // obj1[[age]] = obj[age] + n ;
+        Object.assign(obj1, {[age]: obj[age] + n} );
+    }
+    return obj1 ;
+   
 }
+console.log(afterNYears(myFamily, 2));
+
 
 /**
  * Đảo ngược key thành value, value thành key của một object bất kỳ
@@ -61,7 +76,21 @@ function afterNYears(obj, n) {
  *
  * @return {[key: string]: string} Object mới sau khi đảo ngược
  */
-function invert(obj) {}
+function invert(obj22) {
+    let obj2 = {} ;
+    for( let result in obj22 ){
+       Object.assign(obj2 , {[obj22[result]] : result }) ;
+    }
+    return obj2 ;
+
+}
+obj22 = {
+    Fred: "HA",
+    Susan: "HA1",
+    Emily: "HA2",
+    Tom: "HA3",
+}
+console.log(invert(obj22));
 
 // Danh sách items
 // Key là tên, value là giá trị tương ứng
@@ -77,7 +106,15 @@ const items = {
  *
  * @return {number} Tổng giá trị các items
  */
-function totalAmount(items) {}
+function totalAmount(items) {
+    let x = 0 ;
+    for( let sum in items) {
+       x += items[sum];
+    }
+    return x ;
+}
+console.log(totalAmount(items));
+
 
 /**
  * Lọc và trả về danh sách các items có giá trị cao (value >= 1000) trong danh sách đầu vào
@@ -88,4 +125,20 @@ function totalAmount(items) {}
  *
  * @return {{[key: string]: number}} Danh sách các items có giá trị cao
  */
-function expensiveItems(items) {}
+function expensiveItems(itemss) {
+    let object2 = {} ;
+    for(let key in items) {
+        if(items[key] >= 1000) {
+            return Object.assign(object2 , {[key] : itemss[key]}) ;
+        }
+    }
+    return NaN ;
+}
+itemss = {
+    tv: 300,
+    ipad: 1000,
+    ipad: 1010,
+    ipad: 1100,
+
+}
+console.log(expensiveItems(itemss));
