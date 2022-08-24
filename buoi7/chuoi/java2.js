@@ -43,3 +43,20 @@ console.log(result("hello world") );
 // Bài 4: Viết hàm truyền vào 2 chuỗi, kiểm tra xem chuỗi thứ nhất có chứa toàn bộ ký tự (tính cả dấu cách) 
 // nằm trong chuỗi thứ 2 hay không, kết quả trả về true nếu có và false nếu không (không phân biệt hoa thường). 
 // Ví dụ ''HELLO world'' có chứa ''how'' nhưng không chứa ''hey'' và không chứa ''ww''.
+function contsins(str,char) {
+  const ariginalChar = str.toLowerCase().split("");
+  const subChars = chars.toLowerCase();
+  let flag = true ;
+  for (const key of ) {
+    
+  }
+}
+
+function ziczac(m,n) {
+  const matric = [];
+
+  for(let i = 1; i <= m; i++){
+    const r = [];
+    for(let j = 1 ; j <= n ; j++)
+  }
+}

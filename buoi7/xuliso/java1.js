@@ -66,3 +66,9 @@ console.log(snt(5));
 
 
 
+
+
+function sortNumber(n) {
+    const numbers = String(n).split("").sort();
+    //cắt các chữ số thành mảng
+}
